@@ -1,7 +1,5 @@
 <?php
-    require('./includes/Cars.class.php');
-    require('./includes/mentorCar.php');
-    require('./includes/studentCar.php');
+    require('./includes/superCar.class.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +11,10 @@
 </head>
 <body>
     <?php
-        $mentor = new MentorsCar();
-            $mentor->newMentorCar('white','civic','honda');
-            echo $mentor->mentorCar();
-        $student = new StudentCar();
-            $student->newStudentCar('blue', 'avanza', 'toyota');
-            echo $student->studentCar();
+        $mentor = new MentorsCar('white','civic','honda');
+            echo $mentor->Car();
+        $student = new StudentCar('blue','wigo','toyota');
+            echo $student->Car();
     ?>
 </body>
 </html>
